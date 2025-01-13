@@ -1,111 +1,272 @@
-"use strict";
+// // const friend1 = "Michael";
+// // const friend2 = "Steven";
+// // const friend3 = "Peter";
 
-// let hasDriversLicense = false;
-// const passTest = true;
+// // const friends = ["Michael", "Steven", "Peter"];
+// // console.log(friends);
 
-// if (passTest) hasDriversLicense = true;
-// if (hasDriversLicense) console.log("I can drive");
+// // const years = new Array(1991, 2004, 1984, 2020);
 
-// function logger() {
-// 	console.log("My name is Jonas");
-// }
+// // console.log(friends[0]);
+// // console.log(friends[2]);
 
-// // calling, running, invoking function
-// logger(23);
-// logger();
-// logger();
+// // console.log(friends.length);
+// // console.log(friends[friends.length - 1]);
 
-// function fruitProcessor(apples, oranges) {
-// 	console.log(apples, oranges);
-// 	const juice = `Juice with ${apples} apples and ${oranges} oranges`;
-// 	return juice;
-// }
+// // friends[2] = "Jay";
+// // console.log(friends);
 
-// const appleJuice = fruitProcessor(5, 0);
-// console.log(appleJuice);
-// console.log(fruitProcessor(5, 0));
+// // const calcAge = function (birthYear) {
+// // 	return 2037 - birthYear;
+// // };
+// // const firstName = "Jonas";
+// // const jonas = [firstName, "Schmedtmann", 2037 - 1991, "teacher", friends];
+// // console.log(calcAge(jonas));
 
-// const appleOrangeJuice = fruitProcessor(2, 4);
-// console.log(appleOrangeJuice);
-// function calcAge1(currentYear, birthYear) {
-// 	return currentYear - birthYear;
-// }
+// // const age1 = calcAge(years[0]);
+// // const age2 = calcAge(years[1]);
+// // const age3 = calcAge(years[years.length - 1]);
+// // console.log(age1, age2, age3);
 
-// const age1 = calcAge1(2037, 1991);
-// console.log(age1);
+// // const ages = ["Michael", "Steven", "Peter"];
+// // const friends = ["Michael", "Steven", "Peter"];
+// // const newLength = friends.push("Jay");
 
-// const calcAge2 = function (currentYear, birthYear) {
-// 	return currentYear - birthYear;
+// // console.log(friends);
+// // console.log(newLength);
+
+// // friends.unshift("John");
+// // console.log(friends);
+
+// // friends.pop();
+// // const popped = friends.pop();
+// // console.log(popped);
+// // console.log(friends);
+
+// // friends.shift();
+// // console.log(friends);
+// // console.log(friends.indexOf("Steven"));
+// // console.log(friends.indexOf("Bob"));
+
+// // console.log(friends.includes("Steven"));
+// // console.log(friends.includes("Bob"));
+
+// // if (friends.includes("Peter")) {
+// // 	console.log("You have a friend called Peter");
+// // }
+
+// // challenge
+
+// // const calcTip = function (bill) {
+// // 	return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// // };
+
+// // const bills = [125, 555, 44];
+// // const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+// // const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+// // console.log(bills, tips, totals);
+
+// // const jonasArray = [
+// // 	"Jonas",
+// // 	"Schmedtmann",
+// // 	2037 - 1991,
+// // 	"teacher",
+// // 	["Michael", "Peter", "Steven"],
+// // ];
+
+// // const jonas = {
+// // 	firstName: "Jonas",
+// // 	lastName: "Schmedtmann",
+// // 	age: 2037 - 1991,
+// // 	job: "teacher",
+// // 	friends: ["Michael", "Peter", "Steven"],
+// // };
+
+// // console.log(jonas.lastName);
+// // console.log(jonas["lastName"]);
+// // const interestedIn = "lastName";
+// // if (jonas[interestedIn]) {
+// // 	console.log(jonas[interestedIn]);
+// // } else {
+// // 	console.log("Wrong request");
+// // }
+
+// // jonas.location = "Portugal";
+// // jonas["twitter"] = "@jonasschmedtmann";
+// // console.log(jonas);
+// // console.log(
+// // 	`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`
+// // );
+
+// // const jonas = {
+// // 	firstName: "Jonas",
+// // 	lastName: "Schmedtmann",
+// // 	birthYear: 1991,
+// // 	job: "teacher",
+// // 	friends: ["Michael", "Peter", "Steven"],
+// // 	hasDriversLicense: true,
+// // 	calcAge: function () {
+// // 		this.age = 2037 - this.birthYear;
+// // 		return;
+// // 	},
+// // 	getSummary: function () {
+// // 		return `${this.firstName} is a ${
+// // 			this.age
+// // 		}-year old teacher, and he has ${
+// // 			this.hasDriversLicense ? "a" : "no"
+// // 		} driver's license`;
+// // 	},
+// // };
+
+// // console.log(jonas.calcAge());
+
+// // console.log(jonas.age);
+
+// // console.log(jonas.getSummary());
+
+// const mark = {
+// 	fullName: "Mark Miller",
+// 	mass: 78,
+// 	height: 169,
+// 	calcBMI: function () {
+// 		this.BMI = this.mass / this.height ** 2;
+// 		return this.bmi;
+// 	},
 // };
 
-// const age2 = calcAge2(2037, 1995);
-// console.log(age1, age2);
+// mark.calcBMI();
 
-// const calcAge = function (birthYear) {
-// 	return 2037 - birthYear;
+// const john = {
+// 	fullName: "John Smith",
+// 	mass: 92,
+// 	height: 195,
+// 	calcBMI: function () {
+// 		this.BMI = this.mass / this.height ** 2;
+// 		return this.bmi;
+// 	},
 // };
 
-// console.log(calcAge(991));
+// john.calcBMI();
 
-// const yearsUntilRetirement = (birthYear, firstName) => {
-// 	const age = 2037 - birthYear;
-// 	const yearsUntil = 65 - age;
-// 	return `${firstName}, you have ${yearsUntil} years left until retirement.`;
-// };
-
-// console.log(yearsUntilRetirement(1991, `Bob`));
-
-// function cutFruitPieces(fruit) {
-// 	return fruit * 4;
+// if (john.BMI > mark.BMI) {
+// 	console.log(
+// 		`${john.fullName}'s BMI (${john.BMI}) is higher than ${mark.fullName}'s! (${mark.BMI})`
+// 	);
+// } else if (john.BMI == mark.BMI) {
+// 	console.log(
+// 		`Both BMIs are equal for ${john.fullName} and ${mark.fullName}! (${mark.BMI})`
+// 	);
+// } else {
+// 	console.log(
+// 		`${mark.fullName}'s BMI (${mark.BMI}) is higher than ${john.fullName}'s! (${john.BMI})`
+// 	);
 // }
 
-// function fruitProcessor(apples, oranges) {
-// 	const applePieces = cutFruitPieces(apples);
-// 	const orangePieces = cutFruitPieces(oranges);
-// 	console.log(apples, oranges);
-// 	const juice = `Juice with ${applePieces} apples and ${orangePieces} oranges`;
-// 	return juice;
+// for (let rep = 1; rep <= 10; rep++) {
+// 	console.log(`Lifting wrights repetition ${rep}`);
 // }
 
-// console.log(fruitProcessor(4, 3));
-
-// const calcAge = function (birthYear) {
-// 	return 2037 - birthYear;
+// const john = {
+// 	fullName: "John Smith",
+// 	mass: 92,
+// 	height: 195,
+// 	calcBMI: mass / height ** 2,
 // };
 
-// const yearsUntilRetirement = (birthYear, firstName) => {
-// 	const age = 2037 - birthYear;
-// 	const yearsUntil = 65 - age;
+// const types = [];
 
-// 	return retirement > 0
-// 		? console.log(
-// 				`Retirement will begin after ${yearsUntil} years for ${firstName}`
-// 		  )
-// 		: -1;
+// const jonas = [
+// 	"Jonas",
+// 	"Schmedtmann",
+// 	2037 - 1991,
+// 	"teacher",
+// 	["Michael", "Peter", "Steven"],
+// ];
+
+// for (let i = 0; i < jonas.length; i++) {
+// 	console.log(jonas[i], typeof jonas[i]);
+// 	types.push(typeof jonas[i]);
+// }
+
+// console.log(types);
+
+// const years = [1991, 2007, 1969, 2020];
+
+// for (let i = 0; i < years.length; i++) {
+// 	ages.push(2037 - years[i]);
+// }
+// console.log(ages);
+
+// console.log("--- ONLY STRINGS ---");
+// for (let i = 0; i < jonas.length; i++) {
+// 	if (typeof jonas[i] !== "string") continue;
+// 	console.log(jonas[i], typeof jonas[i]);
+// }
+
+// console.log("--- BREAK WITH NUMBER ---");
+// for (let i = 0; i < jonas.length; i++) {
+// 	if (typeof jonas[i] !== "string") break;
+// 	console.log(jonas[i], typeof jonas[i]);
+// }
+
+// const jonas = [
+// 	"Jonas",
+// 	"Schmedtmann",
+// 	2037 - 1991,
+// 	"teacher",
+// 	["Michael", "Peter", "Steven"],
+// ];
+
+// for (let i = jonas.length - 1; i >= 0; i--) {
+// 	console.log(i, jonas[i]);
+// }
+
+// for (let exercise = 1; exercise < 4; exercise++) {
+// 	console.log(`------ STARTING EXERCISE ${exercise} ------`);
+// 	for (let rep = 1; rep < 6; rep++) {
+// 		console.log(`Lifting weight repetition ${rep}`);
+// 	}
+// }
+
+// let rep = 1;
+// while (rep <= 10) {
+// 	console.log(`Lifting weights repetition ${rep}`);
+// 	rep++;
+// }
+
+// let dice = Math.trunc(Math.random() * 6) + 1;
+// console.log(dice);
+
+// while (dice !== 6) {
+// 	console.log(`You rolled a ${dice}!`);
+// 	dice = Math.trunc(Math.random() * 6) + 1;
+// 	if (dice === 6) console.log("Loop is about to end..");
+// }
+
+// const calcTip = function (bill) {
+// 	return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 // };
 
-const calcAverage = (scores) =>
-	scores.reduce((acc, val) => acc + val, 0) / scores.length;
+// const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+// const tips = [];
+// const totals = [];
 
-const checkWinner = function ({ avg1, teamName1 }, { avg2, teamName2 }) {
-	if (avg1 >= 2 * avg2) {
-		return `${teamName1} won: ${avg1} > ${avg2} in 2 times`;
-	} else if (avg2 >= 2 * avg1) {
-		return `${teamName2} won: ${avg2} > ${avg1} in 2 times`;
-	} else {
-		return "Nobody won: tie";
-	}
-};
+// for (let i = 0; i < bills.length; i++) {
+// 	const currBill = bills[i];
+// 	const currTip = calcTip(currBill);
+// 	tips.push(currTip);
+// 	totals.push(currBill + currTip);
+// }
 
-console.log(
-	checkWinner(
-		{ avg1: calcAverage([44, 23, 71]), teamName1: "Koalas" },
-		{ avg2: calcAverage([65, 54, 49]), teamName2: "Pandas" }
-	)
-);
-console.log(
-	checkWinner(
-		{ avg1: calcAverage([85, 54, 41]), teamName1: "Koalas" },
-		{ avg2: calcAverage([23, 34, 27]), teamName2: "Pandas" }
-	)
-);
+// function calcAverage(arr) {
+// 	sum = 0;
+// 	for (let i = 0; i < arr.length; i++) {
+// 		sum += arr[i];
+// 	}
+// 	return sum / arr.length;
+// }
+
+// console.log(bills);
+// console.log(tips);
+// console.log(totals);
+// console.log(calcAverage(totals));
